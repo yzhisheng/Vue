@@ -20,6 +20,7 @@
 			/* this.$bus.$on('hello',(data)=>{
 				console.log('我是School组件，收到了数据',data)
 			}) */
+			// 订阅消息
 			this.pubId = pubsub.subscribe('hello',(msgName,data)=>{
 				console.log(this)
 				// console.log('有人发布了hello消息，hello消息的回调执行了',msgName,data)
@@ -27,6 +28,7 @@
 		},
 		beforeDestroy() {
 			// this.$bus.$off('hello')
+			// 取消订阅消息
 			pubsub.unsubscribe(this.pubId)
 		},
 	}

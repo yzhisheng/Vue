@@ -22,6 +22,7 @@
 		methods: {
 			sendStudentName(){
 				// this.$bus.$emit('hello',this.name)
+				// 发布消息
 				pubsub.publish('hello',666)
 			}
 		},
